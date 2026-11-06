@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "grid": 32,
+  "state": "S20_e4_A_k001.npz",
+  "eta": 0.0001,
+  "methods": [
+    "gj",
+    "eta",
+    "compact8"
+  ],
+  "certified_load_solves": 18,
+  "max_relative_effective_tensor_difference": 3.836177376950627e-15,
+  "max_residual_over_threshold": 0.9990703958597608,
+  "timing_claim": false
+}

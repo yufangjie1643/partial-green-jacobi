@@ -6,9 +6,12 @@ Use the `v0.1.0` checkout. The package preserves dated experiment directories to
 
 ```bash
 python scripts/reproduce_tables.py --output outputs/reconstructed_tables.json
+python scripts/plot_development.py
 ```
 
 The script reads the archived 17-point alpha grid on 172 development states, applies the two-success eligibility rule and the registered case-weighted loss, and refits `[9/16, 11/16, 13/16]`. The independent replay data are opened only after this fitting stage. This reconstructs the table from measurements instead of treating its entries as unexplained constants.
+
+The plotting command regenerates convergence and exponent-evolution figures as PNG, SVG and PDF in `outputs/figures/`, without changing the archived tables.
 
 `exp/asg_alpha_landscape_20261105/study.py` contains collection and scan routines; `exp/asg_density_selector_20261105/fit.py` contains the frozen fitting procedure. The latter's original `main()` guards the original registration paths; call the portable reconstruction script for verification. It does not overwrite the freeze. Broader exploratory scans and grouped cross-validation records are included in the data assets.
 

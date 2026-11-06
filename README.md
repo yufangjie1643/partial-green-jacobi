@@ -12,10 +12,10 @@ Research code for repeated elastic homogenization in density-based topology opti
 
 For positive scalar stiffness fields multiplying a fixed elastic tensor, the inverse preconditioner is
 
-\[
+$$
 M_\alpha^{-1}=P\,\widehat D^{-\alpha/2}\,G\,\widehat D^{-\alpha/2}\,P,
 \qquad 0\leq\alpha\leq1.
-\]
+$$
 
 Here `P` removes translations, `G` is the discrete reference inverse and `D` is the stiffness diagonal, normalized by its geometric mean. `alpha=0` recovers Green and `alpha=1` recovers full Green–Jacobi. The exponent stays fixed during each PCG solve. Design updates can change the material, diagonal and selected exponent.
 

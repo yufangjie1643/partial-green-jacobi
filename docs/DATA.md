@@ -23,3 +23,5 @@ The development archive also retains scan records from the broader exploratory s
 Read `.npz` with `numpy.load(path, allow_pickle=False)`. Raw JSON records contain thresholds, residuals, iteration counts, statuses and timing components. Failed attempts remain in the dataset; successful subsets of a failing method must not be used for an overall speedup claim.
 
 CPU result reconstruction uses the small source tables already in Git. Large assets are only needed for numerical replay or inspection of density/displacement fields. Downloaded assets can be reused across clean checkouts with `--archive-dir`.
+
+Frozen ASG checkpoints are included to reproduce that comparator. Its earlier synthetic-field training corpus is outside this paper-focused release; the present three-entry calibration dataset and fitting code are included in full.

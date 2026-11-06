@@ -1,0 +1,8 @@
+# Preserve archived file bytes and their provenance hashes across checkouts.
+*.csv -text
+*.json -text
+*.py -text
+*.cu -text
+*.cuh -text
+*.pt binary
+*.png binary
