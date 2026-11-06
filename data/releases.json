@@ -1,0 +1,29 @@
+{
+  "version": "v0.1.0",
+  "assets": [
+    {
+      "name": "development-data.tar.gz",
+      "bytes": 760841580,
+      "sha256": "90ecef9e2e4a542a96acd692db14866de126192b720fb9cd41a25d2af0c21be6",
+      "files": 645,
+      "npz_files": 172,
+      "url": "https://github.com/yufangjie1643/partial-green-jacobi/releases/download/v0.1.0/development-data.tar.gz"
+    },
+    {
+      "name": "independent-test-data.tar.gz",
+      "bytes": 362679964,
+      "sha256": "a00737da9c77665984b28acc2f22b95d2d36d1ba91def6272feadb93ac1ab5f0",
+      "files": 305,
+      "npz_files": 110,
+      "url": "https://github.com/yufangjie1643/partial-green-jacobi/releases/download/v0.1.0/independent-test-data.tar.gz"
+    },
+    {
+      "name": "workflow-data.tar.gz",
+      "bytes": 830116145,
+      "sha256": "06438eb7de6303d48e603e82ccf0c7691f8b4d143f8a2b40e5173bcae6fee1f3",
+      "files": 608,
+      "npz_files": 130,
+      "url": "https://github.com/yufangjie1643/partial-green-jacobi/releases/download/v0.1.0/workflow-data.tar.gz"
+    }
+  ]
+}

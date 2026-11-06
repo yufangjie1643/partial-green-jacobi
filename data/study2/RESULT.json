@@ -1,0 +1,44 @@
+{
+  "status": "complete",
+  "completed_unix": 1793889284.96977,
+  "objective": "Execute the registered staged method screen and select methods",
+  "selected_for_baseline": "eta lookup: 0.5625 / 0.6875 / 0.8125 for eta 1e-4 / 1e-6 / 1e-9",
+  "universal_replacement": "none; retain original Compact8 pending stronger independent evidence",
+  "rejected": {
+    "gray": "fails both grouped validation gains",
+    "contrast": "no additional value over eta lookup; same choice in all 90 fresh states",
+    "compact8q": "small ablation effect, not a new-method claim"
+  },
+  "executed": [
+    "grouped fitting",
+    "54-state CUDA development replay",
+    "18 fresh reference trajectories",
+    "90-state independent replay, 3 repetitions",
+    "12 prespecified endpoint grids",
+    "3 post-hoc diagnostic grids"
+  ],
+  "not_executed": {
+    "full_workflow": "both candidate methods failed the prespecified independent replay gate",
+    "n64_n128": "conditional escalation stopped at replay gate",
+    "serial_robustness": "conditional escalation stopped at replay gate"
+  },
+  "methodology": "New test used only for evaluation; no post-test refit; post-hoc grid diagnostics separate",
+  "main_result": {
+    "contrast": {
+      "saving": 0.04821528756098248,
+      "wins": 14,
+      "worst_ratio": 1.0915583903004227,
+      "failures": 0,
+      "passed": false
+    },
+    "eta": {
+      "saving": 0.05036429678346144,
+      "wins": 15,
+      "worst_ratio": 1.088612341671357,
+      "failures": 0,
+      "passed": false
+    }
+  },
+  "qa_passed": true,
+  "production_solver_modified": false
+}

@@ -1,0 +1,85 @@
+{
+  "folder": "replay_parallel",
+  "states": 90,
+  "attempt_groups": 1620,
+  "successful_groups": 1479,
+  "failed_groups": 141,
+  "certified_load_solves": 8874,
+  "mean_contrast_over_eta": 1.0023046157152313,
+  "summary": [
+    {
+      "method": "compact8",
+      "mean_ratio_compact8": 1.0,
+      "worst_ratio_compact8": 1.0,
+      "wins": 0,
+      "failures": 0,
+      "cases": 18,
+      "mean_feature_ms": 0.3682695116,
+      "mean_preconditioner_ms": 0.1864597337,
+      "mean_solve_certify_ms": 60.8077918229,
+      "max_C_error": 0.0
+    },
+    {
+      "method": "compact8q",
+      "mean_ratio_compact8": 0.9948054826,
+      "worst_ratio_compact8": 1.0192865169,
+      "wins": 10,
+      "failures": 0,
+      "cases": 18,
+      "mean_feature_ms": 0.385103052,
+      "mean_preconditioner_ms": 0.1842922669,
+      "mean_solve_certify_ms": 60.3536347848,
+      "max_C_error": 0.0
+    },
+    {
+      "method": "contrast",
+      "mean_ratio_compact8": 0.9517847124,
+      "worst_ratio_compact8": 1.0915583903,
+      "wins": 14,
+      "failures": 0,
+      "cases": 18,
+      "mean_feature_ms": 0.1519812741,
+      "mean_preconditioner_ms": 0.1937633181,
+      "mean_solve_certify_ms": 57.8096447768,
+      "max_C_error": 0.0
+    },
+    {
+      "method": "eta",
+      "mean_ratio_compact8": 0.9496357032,
+      "worst_ratio_compact8": 1.0886123417,
+      "wins": 15,
+      "failures": 0,
+      "cases": 18,
+      "mean_feature_ms": 0.0100145778,
+      "mean_preconditioner_ms": 0.186932385,
+      "mean_solve_certify_ms": 57.8273077576,
+      "max_C_error": 0.0
+    },
+    {
+      "method": "gj",
+      "mean_ratio_compact8": 1.7217421605,
+      "worst_ratio_compact8": 2.104162073,
+      "wins": 0,
+      "failures": 0,
+      "cases": 18,
+      "mean_feature_ms": 0.0096132741,
+      "mean_preconditioner_ms": 0.1833877333,
+      "mean_solve_certify_ms": 106.3487347426,
+      "max_C_error": 0.0
+    },
+    {
+      "method": "green",
+      "mean_ratio_compact8": null,
+      "worst_ratio_compact8": null,
+      "wins": 0,
+      "failures": 141,
+      "cases": 18,
+      "mean_feature_ms": 0.0077295863,
+      "mean_preconditioner_ms": 0.0075824957,
+      "mean_solve_certify_ms": 523.6081222534,
+      "max_C_error": 0.0
+    }
+  ],
+  "max_C_error": 1.7142957482121072e-11,
+  "max_absolute_threshold_ratio": 0.9999986480252886
+}

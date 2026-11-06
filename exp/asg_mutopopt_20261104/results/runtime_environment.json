@@ -1,0 +1,22 @@
+{
+  "python": "3.12.13 (main, Jun 11 2026, 04:03:26) [Clang 22.1.3 ]",
+  "torch": "2.12.0+cu130",
+  "cupy": "14.2.0",
+  "muGrid": "1.6.1-dirty",
+  "muTopOpt": "0.1.dev1+g7290b28fe",
+  "preload": "/usr/local/cuda/lib64/libcudart.so.13:/usr/local/cuda/lib64/libcufft.so.12",
+  "library_hashes": {
+    "/usr/local/cuda-13.1/targets/x86_64-linux/lib/libcudart.so.13.1.80": "9955aa41ec390676be408b6c615f3d94f067f64cb756ef3cdf2b656ac2a81900",
+    "/usr/local/cuda-13.1/targets/x86_64-linux/lib/libcufft.so.12.1.0.78": "2e0fcf258f8282531dfe4b214b448917c9a3cf730a105c1f31d962517c1ad42f"
+  },
+  "cupy_reported_runtime_version": 13020,
+  "preloaded_runtime_version": 13010,
+  "loaded_cuda_libraries": [
+    "${HOME}/uv-torch-py312/lib/python3.12/site-packages/nvidia/cu13/lib/libcudart.so.13",
+    "${HOME}/uv-torch-py312/lib/python3.12/site-packages/nvidia/cu13/lib/libcufft.so.12",
+    "${HOME}/uv-torch-py312/lib/python3.12/site-packages/nvidia/cu13/lib/libnvrtc-builtins.so.13.0",
+    "${HOME}/uv-torch-py312/lib/python3.12/site-packages/nvidia/cu13/lib/libnvrtc.so.13",
+    "/usr/local/cuda-13.1/targets/x86_64-linux/lib/libcudart.so.13.1.80",
+    "/usr/local/cuda-13.1/targets/x86_64-linux/lib/libcufft.so.12.1.0.78"
+  ]
+}

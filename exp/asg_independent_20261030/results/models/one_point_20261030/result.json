@@ -1,0 +1,12 @@
+{
+  "name": "one_point_20261030",
+  "variant": "one_point",
+  "seed": 20261030,
+  "best_epoch": 52,
+  "epochs": 252,
+  "validation_time_s": 0.018092010917780336,
+  "validation_relative_cost": 1.1810737767112764,
+  "parameters": 8065,
+  "seconds": 0.27025389671325684,
+  "model_sha256": "17d861efeb0529d28a604891a37e6faccd6133638dfcb16848dc2b75ae410af5"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "contrast_only_20261032",
+  "variant": "contrast_only",
+  "seed": 20261032,
+  "best_epoch": 17,
+  "epochs": 250,
+  "validation_time_s": 0.029279161964157308,
+  "validation_relative_cost": 1.7662225159903961,
+  "parameters": 8065,
+  "seconds": 0.2679014205932617,
+  "model_sha256": "113d619bc0c04923acd4c19274acfde50823ebc7c3122bb37def8b3031306dc9"
+}

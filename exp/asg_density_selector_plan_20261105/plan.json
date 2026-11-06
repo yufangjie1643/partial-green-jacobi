@@ -1,0 +1,208 @@
+{
+  "status": "planned_not_executed",
+  "created_unix": 1793886173.614776,
+  "new_gpu_jobs_started": false,
+  "question": "Can a cheap density-grayness correction beat Compact8 and stronger contrast-only rules after all online overhead?",
+  "development": {
+    "source": "asg_alpha_landscape_20261105 and asg_density_alpha_20261105",
+    "known_data": "18 trajectories, 435 states; 172 common-stage/end states used for fitting",
+    "not_independent_test": true,
+    "split": "whole initial families and whole objectives; never random adjacent design steps",
+    "observed_summary_sha256": "7032ede52f8c6453eb7245923f02eea41c485f27299501b750de9398c4c2fdc1",
+    "loss": "0.8 trajectory-balanced mean measured cost/GJ + 0.2 worst trajectory ratio; failure penalty >=100",
+    "cost_labels": "use actual 17-point coarse-grid costs; no interpolated times reported as measured",
+    "tie_rule": "prefer gamma=0 or fewer parameters when grouped-validation improvement is below 1%",
+    "overhead_audit": "Existing fixed-alpha labels only screen candidates. Their selection_ms may combine multiple operations: do not blindly subtract it. Profile actual CUDA selector integration on development states, then validate the net gain before promotion.",
+    "validation_schedule": "Run both leave-one-initial-family-out and leave-one-objective-out validation; all preprocessing, g_ref and parameters are fitted only within training folds. Use validation to select complexity, then refit once on the full development set and freeze."
+  },
+  "candidate": {
+    "material": "a=eta+(1-eta)*rho^3; rho is filtered/projected physical density",
+    "s": "clip(log10(max(a)/min(a)),0,9)",
+    "v": "mean(rho)",
+    "g": "clip(mean(rho*(1-rho))/(v*(1-v)+epsilon),0,1)",
+    "base": "piecewise-linear alpha_C(s), knots (0,0),(4,b4),(6,b6),(9,b9), 0<=b4<=b6<=b9<=1",
+    "density": "alpha_CG = nearest_grid(clip(alpha_C(s)+gamma*(g_ref-g),0,1))",
+    "g_ref": "trajectory-balanced training mean, recomputed within each training fold; frozen for test",
+    "gamma_candidates": [
+      0.0,
+      0.025,
+      0.05,
+      0.075,
+      0.1,
+      0.125,
+      0.15,
+      0.175,
+      0.2,
+      0.225,
+      0.25,
+      0.275,
+      0.3,
+      0.325,
+      0.35,
+      0.375,
+      0.4,
+      0.425,
+      0.45,
+      0.475,
+      0.5
+    ],
+    "anchor_candidates": [
+      0.0,
+      0.0625,
+      0.125,
+      0.1875,
+      0.25,
+      0.3125,
+      0.375,
+      0.4375,
+      0.5,
+      0.5625,
+      0.625,
+      0.6875,
+      0.75,
+      0.8125,
+      0.875,
+      0.9375,
+      1.0
+    ],
+    "alpha_grid": [
+      0.0,
+      0.0625,
+      0.125,
+      0.1875,
+      0.25,
+      0.3125,
+      0.375,
+      0.4375,
+      0.5,
+      0.5625,
+      0.625,
+      0.6875,
+      0.75,
+      0.8125,
+      0.875,
+      0.9375,
+      1.0
+    ],
+    "constant_field": "alpha=0; no division by vanishing contrast",
+    "maximum_fitted_parameters": 4,
+    "inner_outer": "update once per design step; fixed within every PCG solve and shared by six loads",
+    "spatial_features": "EDT and connectivity remain offline explanatory ablations; not in the main online method"
+  },
+  "baselines": [
+    "original continuous Compact8, coefficients and 0.375 gate unchanged",
+    "Compact8 quantized onto the same 17-point grid, quantization ablation",
+    "eta-only fixed alpha lookup, three values fit on development data and frozen",
+    "contrast-only alpha_C with the same quantization as alpha_CG",
+    "GJ alpha=1; Green alpha=0 as replay reference with failures reported"
+  ],
+  "implementation": {
+    "device": "density, stiffness, moments, alpha, scaling and solution buffers remain on CUDA",
+    "features": "min/max(a), mean(rho), mean(rho^2); fused reduction or reuse existing reductions",
+    "timing": "feature extraction and decision overhead must be timed, not inferred from fixed-alpha runs",
+    "loads": "primary two batches of three; same API must support serial load scheduling",
+    "rtol": 1e-08,
+    "final_rtol": 1e-09,
+    "pcg_limit": 4000,
+    "fallback": "no silent fallback; any rescue solve and failed time must be charged and separately reported",
+    "pilot": "Use development states only to check actual feature overhead, parameter transfer avoidance and complete timers. This is a future pilot, not an executed benchmark.",
+    "fair_reuse": "Apply the same warm-start, preconditioner reuse, scheduling, allocation policy and true residual checks to all methods; a material change invalidates reuse as required by each preconditioner."
+  },
+  "fresh_primary_test": {
+    "grid": 32,
+    "objectives": [
+      "shear",
+      "bulk",
+      "existing auxetic surrogate"
+    ],
+    "etas": [
+      0.0001,
+      1e-06,
+      1e-09
+    ],
+    "volume": 0.2,
+    "beta": 4.0,
+    "physical_filter_radius": 0.1,
+    "initializations": [
+      {
+        "kind": "previous family4 with a new multiplicative periodic perturbation",
+        "seed": 2026110521,
+        "scope": "new realization of a known family"
+      },
+      {
+        "kind": "new smooth periodic Fourier-logistic density initialization",
+        "seed": 2026110522,
+        "scope": "new initialization type for this selector study"
+      }
+    ],
+    "case_count": 18,
+    "initial_fields_generated_only_after_selector_freeze": true,
+    "replay_steps": [
+      1,
+      5,
+      20,
+      80
+    ],
+    "also_replay_last": true,
+    "reference": "GJ trajectory; save a,rho,u0 and tensor reference",
+    "repetitions": 3,
+    "outer_limit": 200,
+    "outer_stop": "same maximum design-density-change <=0.01",
+    "initial_volume": "normalize physical initial density to the target volume using the same procedure for all methods",
+    "generator_detail": "freeze Fourier modes, amplitudes, normalization and complete source hashes before opening test data",
+    "benchmark_order": "Replay each saved state with the actual integrated selectors in randomized paired order; use an isolated GPU and record device, clocks, software, dtype and source hashes. Compilation and warm-up are completed before timing.",
+    "full_methods": "Original Compact8, eta lookup, contrast-only, promoted contrast+grayness, and GJ. Green and Compact8-Q are primarily replay ablations. Drop the duplicate density method when gamma=0."
+  },
+  "scale_and_robustness": {
+    "n64": "six preselected objective x eta-endpoint cases; alternate the two initializations by parity before seeing results",
+    "n128": "three preselected subsets: shear eta1e-4 initialA, bulk eta1e-9 initialA, auxetic eta1e-9 initialB",
+    "physical_consistency": "same continuous initial field and physical filter radius; radius in voxels scales with N",
+    "secondary_variants": "Prespecified N32 extensions, only after main benefit: S eta1e-5 initA vf0.2; B eta1e-5 initB vf0.2; S eta1e-6 initA vf0.1; B eta1e-6 initB vf0.3; S eta1e-6 initB vf0.2 with beta=1/2/4/8 at steps 1/21/41/81. For continuation disable outer stopping before step81; report final-phase completion or cap. Never retune on these tests.",
+    "load_schedule": "serial replay verification on the same selected states; report transfer without test retuning",
+    "compute_budget": "measure a short pilot before large-grid jobs; preserve full outer timing even when outer work dominates"
+  },
+  "metrics": {
+    "replay": "selection+preconditioner construction+six load solves+true residual certification; identical a,b,u0,tolerance",
+    "replay_quality": "relative effective-tensor Frobenius error <=1e-6 against the fixed-state reference",
+    "complete_workflow": "per-task setup, filter/projection, material, features/selection, preconditioner, all loads, true residuals, sensitivities, OC, density advance, stopping checks and final tighter reanalysis",
+    "excluded_from_online": "process-wide compilation, file export and figure generation; report these separately",
+    "design_quality": "same feasibility and stopping criteria; compare effective tensor, objective, volume and actual directional Poisson ratios for auxetic cases",
+    "auxetic_time_axis": "do not compare iteration-dependent surrogate f across unequal k as a common physical target; use actual nu and stiffness with prespecified thresholds, otherwise report fixed-budget endpoint",
+    "aggregation": "paired per-trajectory ratios and geometric mean for full-run speed; outer steps are not independent samples",
+    "additional": [
+      "candidate failures",
+      "5% near-best membership",
+      "worst-case regression",
+      "alpha switches",
+      "feature overhead",
+      "memory",
+      "offline labeling/fitting/validation cost"
+    ],
+    "alpha_oracle": "Grid minimum is a retrospective diagnostic, not a deployable zero-cost method. Use existing exhaustive labels for development; on fresh data scan the 17-grid only at first/last states of six predeclared endpoint-eta cases, with search cost reported separately.",
+    "aggregation_caution": "The 18 fresh settings share two initialization types. Three timing repeats measure runtime noise, not generalization over initial fields. Do not treat steps or repeats as independent design samples or claim population significance from two initial fields.",
+    "quality_screen": "Proposed diagnostic thresholds: absolute volume error <=1e-3; replay tensor error <=1e-6. For full runs, flag relative stiffness/objective mismatch >1e-3 or auxetic directional-nu mismatch >1e-3 for closer analysis. Different feasible endpoints require a common physical target or fixed-budget comparison, not an automatic speedup claim."
+  },
+  "decision_gates": {
+    "density_promotion": "Require >=1% grouped development improvement over contrast-only, followed by >=1% net improvement in a development pilot using actual integrated feature computation; no new failures. Otherwise retain gamma=0 and stop density expansion.",
+    "fresh_replay": "target >=5% average net savings vs Compact8, >=12/18 cases faster, no new failures, maximum case regression <=5%",
+    "complete_workflow": "target >=3% geometric-mean time savings vs Compact8 at comparable quality; report achieved value even if below target",
+    "density_innovation_claim": "requires additional reproducible net benefit over both contrast-only and eta-only baselines; >=2% full-workflow benefit is the practical target",
+    "freeze": "do not retune after opening fresh test; a failed hypothesis remains a result; further revisions require new held-out data"
+  },
+  "deliverables": [
+    "alpha/time landscape with formula traces",
+    "paired runtime and overhead breakdown",
+    "objective or physical-property vs cumulative time",
+    "quality and failure table",
+    "frozen parameter JSON and source hashes",
+    "raw per-step records"
+  ],
+  "execution_order": [
+    "1. Fit and group-validate candidates using already measured labels; no new PCG solves.",
+    "2. If screening passes, implement and profile actual CUDA selection on development states, including complete stage timers.",
+    "3. Freeze parameters, generator specification, source hashes and all test settings before generating new test inputs.",
+    "4. Run 18 reference trajectories and randomized paired frozen-state replays; stop escalation on failed benefit/accuracy gates.",
+    "5. Run paired complete N32 optimizations only for the frozen surviving methods; no test-driven retuning.",
+    "6. If full workflow benefit survives, run preselected N64/N128 and serial/secondary robustness checks."
+  ]
+}

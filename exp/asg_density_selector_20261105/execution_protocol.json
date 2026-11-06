@@ -1,0 +1,29 @@
+{
+  "created_unix": 1793887537.0927732,
+  "source_hashes": {
+    "${ARCHIVE_ROOT}/exp/asg_alpha_landscape_20261105/report/states.csv": "ea2cb241eee71b4a94da03a5a431fb15e42b88f60515b91b09732add0828e72a",
+    "${ARCHIVE_ROOT}/exp/asg_alpha_landscape_20261105/report/costs.csv": "0bbb620081b6fb7e47bb5304d1789cdf49370b34386d60325acf0f901b794b05",
+    "${ARCHIVE_ROOT}/exp/asg_density_selector_plan_20261105/plan.json": "345c5069a226d3a12c13b0542a5693bdcd611c032e3bfc92ebe832baa9b5d8b3"
+  },
+  "gate": "gray requires >=1% mean per-case savings vs contrast in BOTH grouped validation schemes, zero additional failed candidates",
+  "timing": "archived costs screen models; real integrated CUDA timing follows before claiming online savings",
+  "quantizer": "floor(16*alpha+0.5), clipped 0..16; exact half ties round upward",
+  "loss": ".8 mean(case mean cost/GJ) + .2 max(case mean cost/GJ), failed cost/GJ=100",
+  "figure_contract": {
+    "backend": "existing Python/Matplotlib workflow",
+    "archetype": "quantitative grid",
+    "conclusion": "Select the simplest method whose gain survives grouped validation and real online timing",
+    "panels": [
+      "grouped validation",
+      "paired replay and overhead",
+      "full workflow if gate passed"
+    ],
+    "exports": [
+      "PNG",
+      "SVG",
+      "PDF",
+      "CSV"
+    ],
+    "risk": "development data are already seen; no random step splits"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "created_unix": 1793888181.130247,
+  "cases": [
+    "S20_e4_A",
+    "S20_e9_B",
+    "B20_e4_A",
+    "B20_e9_B",
+    "A20_e4_A",
+    "A20_e9_B"
+  ],
+  "states": "first and last saved states, deduplicated",
+  "alpha_grid": [
+    0.0,
+    0.0625,
+    0.125,
+    0.1875,
+    0.25,
+    0.3125,
+    0.375,
+    0.4375,
+    0.5,
+    0.5625,
+    0.625,
+    0.6875,
+    0.75,
+    0.8125,
+    0.875,
+    0.9375,
+    1.0
+  ],
+  "repetitions": 3,
+  "selection": "objective x eta endpoints; alternating initialization A/B",
+  "use": "retrospective explanation only; no selector refit",
+  "source_sha256": "bd803699fd67dd8990556111bdd2fc02c38fc9cd6230323bff81115377a8d42f"
+}

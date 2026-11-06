@@ -1,0 +1,12 @@
+{
+  "name": "mlp_large_20261030",
+  "variant": "mlp_large",
+  "seed": 20261030,
+  "best_epoch": 224,
+  "epochs": 424,
+  "validation_time_s": 0.015753635529307412,
+  "validation_relative_cost": 1.016637492650191,
+  "parameters": 20225,
+  "seconds": 0.5093860626220703,
+  "model_sha256": "08668b85b414246007eb0208d651b092fc93c572bce6b3b1afdf80d4b6a09e57"
+}

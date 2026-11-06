@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Please cite this fixed software release when using the code or archived data."
+type: software
+title: "Partial Green–Jacobi preconditioning for periodic cellular material design"
+version: 0.1.0
+date-released: 2026-11-06
+authors:
+  - family-names: Yu
+    given-names: Fangjie
+repository-code: "https://github.com/yufangjie1643/partial-green-jacobi"
+url: "https://github.com/yufangjie1643/partial-green-jacobi/releases/tag/v0.1.0"
+license: MIT
+keywords:
+  - topology optimization
+  - computational homogenization
+  - preconditioning
+  - CUDA
+  - Green-Jacobi

@@ -1,0 +1,6 @@
+{
+  "python": "3.12.13",
+  "isolated_environment": true,
+  "requirements": "requirements-cpu.txt",
+  "unittest_passed": 2
+}

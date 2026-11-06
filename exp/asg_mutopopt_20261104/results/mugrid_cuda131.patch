@@ -1,0 +1,24 @@
+diff --git a/src/libmugrid/fft/cufft_backend.cc b/src/libmugrid/fft/cufft_backend.cc
+index fb2fe33..fa941ff 100644
+--- a/src/libmugrid/fft/cufft_backend.cc
++++ b/src/libmugrid/fft/cufft_backend.cc
+@@ -138,8 +138,8 @@ void cuFFTBackend::check_cufft_result(cufftResult result,
+       error << "CUFFT_UNALIGNED_DATA";
+       break;
+ // CUFFT_INCOMPLETE_PARAMETER_LIST and CUFFT_PARSE_ERROR were removed from the
+-// cufftResult enum in cuFFT 12 (CUDA 13, CUFFT_VERSION 12300).
+-#if !defined(CUFFT_VERSION) || CUFFT_VERSION < 12300
++// cufftResult enum in cuFFT 12.1 (CUDA 13.1, CUFFT_VERSION 12100).
++#if !defined(CUFFT_VERSION) || CUFFT_VERSION < 12100
+     case CUFFT_INCOMPLETE_PARAMETER_LIST:
+       error << "CUFFT_INCOMPLETE_PARAMETER_LIST";
+       break;
+@@ -147,7 +147,7 @@ void cuFFTBackend::check_cufft_result(cufftResult result,
+     case CUFFT_INVALID_DEVICE:
+       error << "CUFFT_INVALID_DEVICE";
+       break;
+-#if !defined(CUFFT_VERSION) || CUFFT_VERSION < 12300
++#if !defined(CUFFT_VERSION) || CUFFT_VERSION < 12100
+     case CUFFT_PARSE_ERROR:
+       error << "CUFFT_PARSE_ERROR";
+       break;

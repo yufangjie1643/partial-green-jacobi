@@ -1,0 +1,258 @@
+{
+  "created_unix": 1793887537.491009,
+  "data_states": 172,
+  "trajectories": 18,
+  "grouped_gates": {
+    "family": {
+      "gray_saving_vs_contrast": -0.007788935937971253,
+      "gray_failures": 0,
+      "passed": false
+    },
+    "objective": {
+      "gray_saving_vs_contrast": -0.0012321925448930404,
+      "gray_failures": 0,
+      "passed": false
+    }
+  },
+  "gray_promoted_by_offline": false,
+  "models": {
+    "eta": {
+      "kind": "eta",
+      "anchors": [
+        0.5625,
+        0.6875,
+        0.8125
+      ],
+      "gamma": 0.0,
+      "g_ref": 0.3739899920170806,
+      "train_loss": 0.5495816713547617
+    },
+    "contrast": {
+      "kind": "contrast",
+      "anchors": [
+        0.5625,
+        0.6875,
+        0.8125
+      ],
+      "gamma": 0.0,
+      "g_ref": 0.3739899920170806,
+      "train_loss": 0.5470951265333412
+    },
+    "gray": {
+      "kind": "gray",
+      "anchors": [
+        0.5625,
+        0.75,
+        0.8125
+      ],
+      "gamma": 0.075,
+      "g_ref": 0.3739899920170806,
+      "train_loss": 0.5446998242427634
+    }
+  },
+  "cv_models": [
+    {
+      "split": "family",
+      "held": "3",
+      "kind": "eta",
+      "anchors": [
+        0.5625,
+        0.6875,
+        0.8125
+      ],
+      "gamma": 0.0,
+      "g_ref": 0.39924715016029677,
+      "train_loss": 0.5361619598766029
+    },
+    {
+      "split": "family",
+      "held": "3",
+      "kind": "contrast",
+      "anchors": [
+        0.5625,
+        0.6875,
+        0.8125
+      ],
+      "gamma": 0.0,
+      "g_ref": 0.39924715016029677,
+      "train_loss": 0.5326037904277554
+    },
+    {
+      "split": "family",
+      "held": "3",
+      "kind": "gray",
+      "anchors": [
+        0.5625,
+        0.75,
+        0.8125
+      ],
+      "gamma": 0.175,
+      "g_ref": 0.39924715016029677,
+      "train_loss": 0.52787376009787
+    },
+    {
+      "split": "family",
+      "held": "4",
+      "kind": "eta",
+      "anchors": [
+        0.5625,
+        0.75,
+        0.8125
+      ],
+      "gamma": 0.0,
+      "g_ref": 0.34873283387386445,
+      "train_loss": 0.5583172993828918
+    },
+    {
+      "split": "family",
+      "held": "4",
+      "kind": "contrast",
+      "anchors": [
+        0.5625,
+        0.75,
+        0.8125
+      ],
+      "gamma": 0.0,
+      "g_ref": 0.34873283387386445,
+      "train_loss": 0.5583172993828918
+    },
+    {
+      "split": "family",
+      "held": "4",
+      "kind": "gray",
+      "anchors": [
+        0.625,
+        0.75,
+        0.875
+      ],
+      "gamma": 0.175,
+      "g_ref": 0.34873283387386445,
+      "train_loss": 0.5580918924648355
+    },
+    {
+      "split": "objective",
+      "held": "auxetic",
+      "kind": "eta",
+      "anchors": [
+        0.5625,
+        0.6875,
+        0.8125
+      ],
+      "gamma": 0.0,
+      "g_ref": 0.39185291044126425,
+      "train_loss": 0.5284135722858334
+    },
+    {
+      "split": "objective",
+      "held": "auxetic",
+      "kind": "contrast",
+      "anchors": [
+        0.5625,
+        0.6875,
+        0.8125
+      ],
+      "gamma": 0.0,
+      "g_ref": 0.39185291044126425,
+      "train_loss": 0.5272777754093576
+    },
+    {
+      "split": "objective",
+      "held": "auxetic",
+      "kind": "gray",
+      "anchors": [
+        0.5625,
+        0.6875,
+        0.8125
+      ],
+      "gamma": 0.05,
+      "g_ref": 0.39185291044126425,
+      "train_loss": 0.5259915669696411
+    },
+    {
+      "split": "objective",
+      "held": "bulk",
+      "kind": "eta",
+      "anchors": [
+        0.5625,
+        0.75,
+        0.8125
+      ],
+      "gamma": 0.0,
+      "g_ref": 0.3740727292411437,
+      "train_loss": 0.5520407809176252
+    },
+    {
+      "split": "objective",
+      "held": "bulk",
+      "kind": "contrast",
+      "anchors": [
+        0.5625,
+        0.6875,
+        0.8125
+      ],
+      "gamma": 0.0,
+      "g_ref": 0.3740727292411437,
+      "train_loss": 0.5503497188001254
+    },
+    {
+      "split": "objective",
+      "held": "bulk",
+      "kind": "gray",
+      "anchors": [
+        0.625,
+        0.75,
+        0.8125
+      ],
+      "gamma": 0.075,
+      "g_ref": 0.3740727292411437,
+      "train_loss": 0.5470798500216452
+    },
+    {
+      "split": "objective",
+      "held": "shear",
+      "kind": "eta",
+      "anchors": [
+        0.5625,
+        0.75,
+        0.8125
+      ],
+      "gamma": 0.0,
+      "g_ref": 0.35604433636883365,
+      "train_loss": 0.5622268134896474
+    },
+    {
+      "split": "objective",
+      "held": "shear",
+      "kind": "contrast",
+      "anchors": [
+        0.5625,
+        0.75,
+        0.8125
+      ],
+      "gamma": 0.0,
+      "g_ref": 0.35604433636883365,
+      "train_loss": 0.5622268134896474
+    },
+    {
+      "split": "objective",
+      "held": "shear",
+      "kind": "gray",
+      "anchors": [
+        0.625,
+        0.75,
+        0.8125
+      ],
+      "gamma": 0.075,
+      "g_ref": 0.35604433636883365,
+      "train_loss": 0.5566765839868582
+    }
+  ],
+  "fit_seconds": 0.4144223259645514,
+  "source_hashes": {
+    "${ARCHIVE_ROOT}/exp/asg_alpha_landscape_20261105/report/states.csv": "ea2cb241eee71b4a94da03a5a431fb15e42b88f60515b91b09732add0828e72a",
+    "${ARCHIVE_ROOT}/exp/asg_alpha_landscape_20261105/report/costs.csv": "0bbb620081b6fb7e47bb5304d1789cdf49370b34386d60325acf0f901b794b05",
+    "${ARCHIVE_ROOT}/exp/asg_density_selector_plan_20261105/plan.json": "345c5069a226d3a12c13b0542a5693bdcd611c032e3bfc92ebe832baa9b5d8b3"
+  },
+  "fit_sha256": "4aaffd641db11d7aa5dc838e80271d392bcd772714ab4c6bd554b454107f9bfd",
+  "test_data_opened": false
+}

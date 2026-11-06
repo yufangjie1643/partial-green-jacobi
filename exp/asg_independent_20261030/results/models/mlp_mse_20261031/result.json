@@ -1,0 +1,12 @@
+{
+  "name": "mlp_mse_20261031",
+  "variant": "mlp_mse",
+  "seed": 20261031,
+  "best_epoch": 229,
+  "epochs": 429,
+  "validation_time_s": 0.015754170328208448,
+  "validation_relative_cost": 1.0189307614044365,
+  "parameters": 8065,
+  "seconds": 0.4527552127838135,
+  "model_sha256": "b48f57e82b1847be433df1a28e49f802f69ffbfe99336410b45f71216fb55289"
+}

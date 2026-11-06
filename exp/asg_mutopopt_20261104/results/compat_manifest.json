@@ -1,0 +1,6 @@
+{
+  "system_files_modified": false,
+  "changes": "Add noexcept to two rsqrt host/device declarations for glibc compatibility",
+  "original_sha256": "decdc28efcfaf0aaf806abc96d7bba9cb84b37c6e83cb82cda59b6aa59916ff8",
+  "overlay_sha256": "96873ca8689762389f4a66308103c0ff0fcf87175ab57687da648f4d27fb5fb5"
+}

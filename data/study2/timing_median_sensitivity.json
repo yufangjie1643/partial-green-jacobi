@@ -1,0 +1,20 @@
+[
+  {
+    "method": "eta",
+    "median_based_saving": 0.05077357122601156,
+    "worst_ratio": 1.0891788709530488,
+    "wins": 15
+  },
+  {
+    "method": "contrast",
+    "median_based_saving": 0.04790133836023436,
+    "worst_ratio": 1.091997782006758,
+    "wins": 14
+  },
+  {
+    "method": "compact8q",
+    "median_based_saving": 0.005000013911229728,
+    "worst_ratio": 1.0207080695976987,
+    "wins": 10
+  }
+]

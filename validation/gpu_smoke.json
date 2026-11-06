@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "grid": 8,
+  "steps": 3,
+  "method_schedule_combinations": 6,
+  "certified_load_solves": 54,
+  "max_relative_objective_difference": 6.632974978627109e-10,
+  "max_relative_design_density_difference": 1.9568477016982684e-09,
+  "max_residual_over_threshold": 0.9997815509621879,
+  "timing_claim": false,
+  "environment": {
+    "torch": "2.12.0+cu130",
+    "cuda": "13.0",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "python": "3.12.13 (main, Jun 11 2026, 04:03:26) [Clang 22.1.3 ]",
+    "command": [
+      "examples/shear_design.py",
+      "--n",
+      "8",
+      "--steps",
+      "3",
+      "--methods",
+      "green",
+      "gj",
+      "0.5",
+      "--load-modes",
+      "serial",
+      "parallel",
+      "--output",
+      "outputs/release-smoke-clean"
+    ]
+  },
+  "note": "Initial attempt rejected by the exclusive-GPU guard after another process appeared. This report uses a clean successful rerun."
+}

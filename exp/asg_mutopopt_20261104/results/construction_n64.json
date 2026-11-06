@@ -1,0 +1,23 @@
+{
+  "one_time_s": {
+    "mutopopt-green": 0.09844252897892147,
+    "mutopopt-gj": 0.08047591202193871,
+    "mutopopt-partial-0.5": 0.07700807298533618
+  },
+  "provenance": {
+    "repos": {
+      "muGrid": "2faa75b2590d327fbdd846c21cfec959ed381cf5",
+      "muTopOpt": "7290b28fedf6ec9510993d68ddb0692f5720fc3c"
+    },
+    "python": "3.12.13 (main, Jun 11 2026, 04:03:26) [Clang 22.1.3 ]",
+    "torch": "2.12.0+cu130",
+    "cupy": "14.2.0",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "binaries": {
+      ".venv/lib/python3.12/site-packages/muGrid/_muGrid.cpython-312-x86_64-linux-gnu.so": "e53664d67403f95925f82d113f269349e71a8fe3a82526ed4430c28198c0da2f"
+    },
+    "compatibility_patch": "results/mugrid_cuda131.patch",
+    "precision": "float64",
+    "cuda_architecture": 120
+  }
+}

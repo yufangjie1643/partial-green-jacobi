@@ -1,0 +1,75 @@
+{
+  "passed": true,
+  "source_integrity": {
+    "development_sources": true,
+    "fitting_source": true,
+    "test_sources": true
+  },
+  "grouped_models_recomputed": true,
+  "audits": {
+    "development": {
+      "states": 54,
+      "successful_groups": 810,
+      "failed_groups": 0,
+      "max_C_error": 1.1810095460849298e-14,
+      "max_residual_threshold_ratio": 0.9999953173162208
+    },
+    "replay_parallel": {
+      "states": 90,
+      "successful_groups": 1479,
+      "failed_groups": 141,
+      "max_C_error": 1.7142957482121072e-11,
+      "max_residual_threshold_ratio": 0.9999986480252886
+    },
+    "oracle": {
+      "states": 12,
+      "successful_groups": 525,
+      "failed_groups": 87,
+      "max_C_error": 4.680159108597427e-13,
+      "max_residual_threshold_ratio": 0.999969689544597
+    },
+    "diagnostic": {
+      "states": 3,
+      "successful_groups": 147,
+      "failed_groups": 6,
+      "max_C_error": 1.7142947464310776e-11,
+      "max_residual_threshold_ratio": 0.9999010490495636
+    }
+  },
+  "reference": {
+    "complete": 18,
+    "outer_converged": 6,
+    "capped": 12,
+    "total_steps": 3324,
+    "initial_physical_density_identical_across_eta_and_objective": true
+  },
+  "figures_with_editable_text": [
+    "replay_parallel_stages",
+    "replay_parallel_paired",
+    "grouped_validation",
+    "fresh_geometry",
+    "regression_diagnosis",
+    "prespecified_alpha_grids",
+    "fresh_alpha",
+    "development_paired",
+    "development_stages"
+  ],
+  "html": [
+    {
+      "width": 1440,
+      "scroll": 1440,
+      "viewport": 1440,
+      "images": true,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "scroll": 390,
+      "viewport": 390,
+      "images": true,
+      "errors": []
+    }
+  ],
+  "completed_sessions": 6,
+  "all_accepted_sessions_no_gpu_interference": true
+}

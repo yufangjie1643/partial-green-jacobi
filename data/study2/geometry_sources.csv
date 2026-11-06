@@ -1,0 +1,9 @@
+case,source,state,outer_updates,volume,gray_fraction,threshold,periods_per_axis,triangles
+S20_e9_A,states/S20_e9_A_k001.npz,initial,0,0.20000000000000107,0.83160400390625,0.5,2,52704
+S20_e9_A,reference/S20_e9_A.npz,final reanalysis,156,0.19999956590086607,0.2119140625,0.5,2,73584
+B20_e9_A,reference/B20_e9_A.npz,final reanalysis,152,0.19999965108372142,0.1505126953125,0.5,2,38904
+A20_e9_A,reference/A20_e9_A.npz,final reanalysis,200,0.19999966050702467,0.208892822265625,0.5,2,76720
+S20_e9_B,states/S20_e9_B_k001.npz,initial,0,0.19999999999999665,0.6611328125,0.5,2,66528
+S20_e9_B,reference/S20_e9_B.npz,final reanalysis,200,0.20000035614461598,0.2305908203125,0.5,2,82712
+B20_e9_B,reference/B20_e9_B.npz,final reanalysis,200,0.20000039525059232,0.192291259765625,0.5,2,81104
+A20_e9_B,reference/A20_e9_B.npz,final reanalysis,200,0.2000000523590879,0.18255615234375,0.5,2,68000

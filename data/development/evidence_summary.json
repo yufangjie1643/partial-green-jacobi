@@ -1,0 +1,108 @@
+{
+  "date": "2026-11-06",
+  "new_gpu_measurements": false,
+  "claim": "Measured convergence sensitivity motivates empirical shared exponents.",
+  "backend": "Python/matplotlib",
+  "figure_width_mm": 183,
+  "statistics": "Two technical repetitions; SD bands, no confidence intervals.",
+  "history_scope": "Terminal iteration counts, final residual certificates and timings; no residual histories.",
+  "states": 172,
+  "coarse_cost_entries": 2924,
+  "eligible_entries": 2591,
+  "candidate_table_combinations": 4913,
+  "table_anchors": [
+    0.5625,
+    0.6875,
+    0.8125
+  ],
+  "table_loss": 0.5495816713547617,
+  "statewise_ranges": {
+    "4": {
+      "states": 58,
+      "min": 0.4375,
+      "median": 0.5625,
+      "max": 0.875
+    },
+    "6": {
+      "states": 57,
+      "min": 0.625,
+      "median": 0.6875,
+      "max": 0.8125
+    },
+    "9": {
+      "states": 57,
+      "min": 0.75,
+      "median": 0.8125,
+      "max": 0.9375
+    }
+  },
+  "illustrated_states": [
+    {
+      "trajectory": "S20_e4_i4",
+      "iteration": 1,
+      "best_alpha": 0.5625,
+      "mean_ms": 33.52860250743106,
+      "mean_iterations": 606.0
+    },
+    {
+      "trajectory": "S20_e4_i4",
+      "iteration": 20,
+      "best_alpha": 0.5,
+      "mean_ms": 37.29663000558503,
+      "mean_iterations": 654.5
+    },
+    {
+      "trajectory": "S20_e4_i4",
+      "iteration": 81,
+      "best_alpha": 0.5625,
+      "mean_ms": 30.92423701309599,
+      "mean_iterations": 509.0
+    },
+    {
+      "trajectory": "S20_e6_i4",
+      "iteration": 1,
+      "best_alpha": 0.6875,
+      "mean_ms": 41.55902046477422,
+      "mean_iterations": 749.0
+    },
+    {
+      "trajectory": "S20_e6_i4",
+      "iteration": 20,
+      "best_alpha": 0.6875,
+      "mean_ms": 49.51568800606765,
+      "mean_iterations": 892.5
+    },
+    {
+      "trajectory": "S20_e6_i4",
+      "iteration": 80,
+      "best_alpha": 0.6875,
+      "mean_ms": 37.77211849228479,
+      "mean_iterations": 630.5
+    },
+    {
+      "trajectory": "S20_e9_i4",
+      "iteration": 1,
+      "best_alpha": 0.75,
+      "mean_ms": 46.736444521229714,
+      "mean_iterations": 845.5
+    },
+    {
+      "trajectory": "S20_e9_i4",
+      "iteration": 20,
+      "best_alpha": 0.8125,
+      "mean_ms": 64.19032151461579,
+      "mean_iterations": 1119.5
+    },
+    {
+      "trajectory": "S20_e9_i4",
+      "iteration": 80,
+      "best_alpha": 0.8125,
+      "mean_ms": 43.42558549251408,
+      "mean_iterations": 764.5
+    }
+  ],
+  "hashes": {
+    "data/development/states.csv": "acd74b3a70e06228ac114a97498acc75a4ee93f2063d1d97689bf2d2dbfe6f82",
+    "data/development/costs.csv": "448930f3b981812910a310ada22cd8624bf96a3d3886b53b40e6f29c39f7a4f1"
+  }
+}

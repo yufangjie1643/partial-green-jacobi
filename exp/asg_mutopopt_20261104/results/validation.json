@@ -1,0 +1,226 @@
+{
+  "n": 8,
+  "rows": [
+    {
+      "method": "mutopopt-green",
+      "load_mode": "serial",
+      "material_precond_s": 0.0002803120296448469,
+      "rhs_bridge_initial_check_s": 0.004684808955062181,
+      "solve_s": 0.0784711159649305,
+      "certificate_s": 0.00035892199957743287,
+      "response_s": 0.01888854498974979,
+      "total_s": 0.10317945800488815,
+      "J": 0.00980304636291475,
+      "native_moduli": [
+        0.009653359407080321,
+        0.010018476572438963,
+        0.009737303110093638
+      ],
+      "moduli": [
+        0.009653359407862688,
+        0.010018476571989041,
+        0.009737303108892523
+      ],
+      "relative_J_error": null,
+      "iterations": 433,
+      "loads": [
+        {
+          "iterations": 145,
+          "restarts": 0,
+          "solve_s": 0.02685043099336326,
+          "absolute_residual": 1.7332510339029383e-10,
+          "rhs_norm": 0.020604269036009974,
+          "relative_residual": 8.412096691582432e-09,
+          "threshold": 2.0604269036009975e-10,
+          "converged": true
+        },
+        {
+          "iterations": 144,
+          "restarts": 0,
+          "solve_s": 0.025814722990617156,
+          "absolute_residual": 1.8332246659038906e-10,
+          "rhs_norm": 0.020610411607421476,
+          "relative_residual": 8.894653347164479e-09,
+          "threshold": 2.0610411607421476e-10,
+          "converged": true
+        },
+        {
+          "iterations": 144,
+          "restarts": 0,
+          "solve_s": 0.025805961980950087,
+          "absolute_residual": 1.7861308684283216e-10,
+          "rhs_norm": 0.020878939450764886,
+          "relative_residual": 8.554701126655588e-09,
+          "threshold": 2.0878939450764887e-10,
+          "converged": true
+        }
+      ],
+      "converged": true,
+      "action_error": 4.265394481992715e-16,
+      "rhs_errors": [
+        2.992732522145608e-16,
+        2.5899268571351646e-16,
+        3.12395179976692e-16
+      ],
+      "null_errors": [
+        3.12948792713905e-17,
+        3.567619036648643e-17,
+        5.876632296881429e-17
+      ],
+      "response_error": 8.847261600317524e-11
+    },
+    {
+      "method": "mutopopt-gj",
+      "load_mode": "serial",
+      "material_precond_s": 0.00031207199208438396,
+      "rhs_bridge_initial_check_s": 0.000632065930403769,
+      "solve_s": 0.034447871963493526,
+      "certificate_s": 0.00030208309181034565,
+      "response_s": 5.818100180476904e-05,
+      "total_s": 0.03614216699497774,
+      "J": 0.00980304636291475,
+      "native_moduli": [
+        0.009653359407856948,
+        0.010018476571995168,
+        0.009737303108892552
+      ],
+      "moduli": [
+        0.009653359407862687,
+        0.010018476571989041,
+        0.009737303108892523
+      ],
+      "relative_J_error": null,
+      "iterations": 184,
+      "loads": [
+        {
+          "iterations": 62,
+          "restarts": 0,
+          "solve_s": 0.011910047964192927,
+          "absolute_residual": 1.582226996300359e-10,
+          "rhs_norm": 0.020604269036009974,
+          "relative_residual": 7.679122193246017e-09,
+          "threshold": 2.0604269036009975e-10,
+          "converged": true
+        },
+        {
+          "iterations": 61,
+          "restarts": 0,
+          "solve_s": 0.01122102199587971,
+          "absolute_residual": 1.875793149753682e-10,
+          "rhs_norm": 0.020610411607421476,
+          "relative_residual": 9.101192084287337e-09,
+          "threshold": 2.0610411607421476e-10,
+          "converged": true
+        },
+        {
+          "iterations": 61,
+          "restarts": 0,
+          "solve_s": 0.01131680200342089,
+          "absolute_residual": 1.8949748431778908e-10,
+          "rhs_norm": 0.020878939450764886,
+          "relative_residual": 9.076011009306652e-09,
+          "threshold": 2.0878939450764887e-10,
+          "converged": true
+        }
+      ],
+      "converged": true,
+      "action_error": 4.2659585728719217e-16,
+      "rhs_errors": [
+        2.992732522145608e-16,
+        2.5899268571351646e-16,
+        3.12395179976692e-16
+      ],
+      "null_errors": [
+        3.12948792713905e-17,
+        3.567619036648643e-17,
+        5.876632296881429e-17
+      ],
+      "response_error": 4.943448713901202e-13
+    },
+    {
+      "method": "mutopopt-partial-0.5",
+      "load_mode": "serial",
+      "material_precond_s": 0.000293802993837744,
+      "rhs_bridge_initial_check_s": 0.0006226740661077201,
+      "solve_s": 0.03133577696280554,
+      "certificate_s": 0.0003555730218067765,
+      "response_s": 6.396998651325703e-05,
+      "total_s": 0.033084221999160945,
+      "J": 0.009803046362914746,
+      "native_moduli": [
+        0.009653359408291385,
+        0.010018476571438475,
+        0.009737303108140846
+      ],
+      "moduli": [
+        0.009653359407862685,
+        0.010018476571989038,
+        0.009737303108892518
+      ],
+      "relative_J_error": null,
+      "iterations": 163,
+      "loads": [
+        {
+          "iterations": 55,
+          "restarts": 0,
+          "solve_s": 0.010606556956190616,
+          "absolute_residual": 1.7851246308760475e-10,
+          "rhs_norm": 0.020604269036009974,
+          "relative_residual": 8.66385809540826e-09,
+          "threshold": 2.0604269036009975e-10,
+          "converged": true
+        },
+        {
+          "iterations": 54,
+          "restarts": 0,
+          "solve_s": 0.010696747980546206,
+          "absolute_residual": 1.7829534742240374e-10,
+          "rhs_norm": 0.020610411607421476,
+          "relative_residual": 8.650741713387347e-09,
+          "threshold": 2.0610411607421476e-10,
+          "converged": true
+        },
+        {
+          "iterations": 54,
+          "restarts": 0,
+          "solve_s": 0.010032472026068717,
+          "absolute_residual": 1.336515623846042e-10,
+          "rhs_norm": 0.020878939450764886,
+          "relative_residual": 6.40126203247876e-09,
+          "threshold": 2.0878939450764887e-10,
+          "converged": true
+        }
+      ],
+      "converged": true,
+      "action_error": 4.2682989531421355e-16,
+      "rhs_errors": [
+        2.992732522145608e-16,
+        2.5899268571351646e-16,
+        3.12395179976692e-16
+      ],
+      "null_errors": [
+        3.12948792713905e-17,
+        3.567619036648643e-17,
+        5.876632296881429e-17
+      ],
+      "response_error": 6.039670623015461e-11
+    }
+  ],
+  "provenance": {
+    "repos": {
+      "muGrid": "2faa75b2590d327fbdd846c21cfec959ed381cf5",
+      "muTopOpt": "7290b28fedf6ec9510993d68ddb0692f5720fc3c"
+    },
+    "python": "3.12.13 (main, Jun 11 2026, 04:03:26) [Clang 22.1.3 ]",
+    "torch": "2.12.0+cu130",
+    "cupy": "14.2.0",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "binaries": {
+      ".venv/lib/python3.12/site-packages/muGrid/_muGrid.cpython-312-x86_64-linux-gnu.so": "e53664d67403f95925f82d113f269349e71a8fe3a82526ed4430c28198c0da2f"
+    },
+    "compatibility_patch": "results/mugrid_cuda131.patch",
+    "precision": "float64",
+    "cuda_architecture": 120
+  },
+  "passed": true
+}

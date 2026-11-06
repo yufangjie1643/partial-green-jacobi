@@ -1,0 +1,42 @@
+{
+  "created_unix": 1793888900.2875185,
+  "states": [
+    [
+      "A20_e6_A",
+      1
+    ],
+    [
+      "A20_e6_A",
+      20
+    ],
+    [
+      "B20_e6_A",
+      152
+    ]
+  ],
+  "alpha_grid": [
+    0.0,
+    0.0625,
+    0.125,
+    0.1875,
+    0.25,
+    0.3125,
+    0.375,
+    0.4375,
+    0.5,
+    0.5625,
+    0.625,
+    0.6875,
+    0.75,
+    0.8125,
+    0.875,
+    0.9375,
+    1.0
+  ],
+  "repeats": 3,
+  "status": "post-hoc exploratory diagnosis, selected after observing regression, not an independent validation subset",
+  "reason": "worst case A20_e6_A step20; bulk e6_A final regression; same initial state as control",
+  "models_not_refit": true,
+  "model_sha256": "40f6e17cdca125c86233605f222783f58bc865eadac4e869682a71ca3d78141e",
+  "source_sha256": "cc5c6ea4f3c05d5ce3671e2fac976e79adaeeb2467762fbfaba30b4be61d60a9"
+}

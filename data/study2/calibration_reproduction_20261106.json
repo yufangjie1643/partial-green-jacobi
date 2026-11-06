@@ -1,0 +1,83 @@
+{
+  "date": "2026-11-06",
+  "purpose": "Explain and reproduce manuscript section 3.3 using archived development measurements",
+  "new_gpu_measurements": false,
+  "frozen_models_modified": false,
+  "states": 172,
+  "trajectories": 18,
+  "states_per_eta": {
+    "1e-09": 57,
+    "1e-06": 57,
+    "0.0001": 58
+  },
+  "alpha_grid": [
+    0.0,
+    0.0625,
+    0.125,
+    0.1875,
+    0.25,
+    0.3125,
+    0.375,
+    0.4375,
+    0.5,
+    0.5625,
+    0.625,
+    0.6875,
+    0.75,
+    0.8125,
+    0.875,
+    0.9375,
+    1.0
+  ],
+  "repetitions_required": 2,
+  "eligible_cost_entries": 2591,
+  "failed_or_ineligible_entries": 333,
+  "table_candidates": 4913,
+  "table_monotonicity_constraint": false,
+  "contrast_and_gray_anchor_candidates": 969,
+  "contrast_and_gray_monotonicity_constraint": true,
+  "loss": "0.8 * mean(trajectory mean cost/GJ) + 0.2 * max(trajectory mean cost/GJ); failed cost/GJ=100",
+  "reproduced_models": {
+    "eta": {
+      "kind": "eta",
+      "anchors": [
+        0.5625,
+        0.6875,
+        0.8125
+      ],
+      "gamma": 0.0,
+      "g_ref": 0.3739899920170806,
+      "train_loss": 0.5495816713547617
+    },
+    "contrast": {
+      "kind": "contrast",
+      "anchors": [
+        0.5625,
+        0.6875,
+        0.8125
+      ],
+      "gamma": 0.0,
+      "g_ref": 0.3739899920170806,
+      "train_loss": 0.5470951265333412
+    },
+    "gray": {
+      "kind": "gray",
+      "anchors": [
+        0.5625,
+        0.75,
+        0.8125
+      ],
+      "gamma": 0.075,
+      "g_ref": 0.3739899920170806,
+      "train_loss": 0.5446998242427634
+    }
+  },
+  "matches_frozen_models": true,
+  "source_hashes": {
+    "${ARCHIVE_ROOT}/exp/asg_alpha_landscape_20261105/report/states.csv": "ea2cb241eee71b4a94da03a5a431fb15e42b88f60515b91b09732add0828e72a",
+    "${ARCHIVE_ROOT}/exp/asg_alpha_landscape_20261105/report/costs.csv": "0bbb620081b6fb7e47bb5304d1789cdf49370b34386d60325acf0f901b794b05",
+    "${ARCHIVE_ROOT}/exp/asg_density_selector_plan_20261105/plan.json": "345c5069a226d3a12c13b0542a5693bdcd611c032e3bfc92ebe832baa9b5d8b3"
+  },
+  "fit_source": "exp/asg_density_selector_20261105/fit.py",
+  "fit_sha256": "4aaffd641db11d7aa5dc838e80271d392bcd772714ab4c6bd554b454107f9bfd"
+}

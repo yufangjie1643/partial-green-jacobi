@@ -1,0 +1,31 @@
+{
+  "calibration": {
+    "states": 172,
+    "trajectories": 18,
+    "kind": "eta",
+    "anchors": [
+      0.5625,
+      0.6875,
+      0.8125
+    ],
+    "gamma": 0.0,
+    "g_ref": 0.3739899920170806,
+    "train_loss": 0.5495816713547617
+  },
+  "study1_baseline_same_budget_savings": {
+    "green": 0.5646068510993896,
+    "gj": 0.5228818873385783
+  },
+  "native_scaling_ablation_savings": {
+    "32": 0.6038639622022288,
+    "64": 0.7002305765556556
+  },
+  "study2": {
+    "cases": 18,
+    "mean_saving_vs_gj": 0.4033940847089288,
+    "mean_saving_vs_compact8": 0.05036429678346144,
+    "worst_regression_vs_compact8": 0.08861234167135712,
+    "failed_eta_attempts": 0,
+    "failed_green_attempts": 141
+  }
+}

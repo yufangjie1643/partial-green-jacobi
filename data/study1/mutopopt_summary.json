@@ -1,0 +1,19 @@
+{
+  "32": {
+    "native_partial_reduction_vs_gj": 0.6038639622022286,
+    "native_partial_iteration_reduction": 0.6186297671279108,
+    "ours_partial_speedup_vs_native_gj": 5.116167392315996,
+    "ours_partial_speedup_vs_native_partial": 2.026698279502215
+  },
+  "64": {
+    "native_partial_reduction_vs_gj": 0.7002305765556556,
+    "native_partial_iteration_reduction": 0.7076805502483761,
+    "ours_partial_speedup_vs_native_gj": 8.783980151928745,
+    "ours_partial_speedup_vs_native_partial": 2.633168665690244
+  },
+  "records": 264,
+  "load_cases": 792,
+  "all_passed": true,
+  "max_relative_J_error": 7.981632753269473e-16,
+  "max_relative_residual": 9.998695228782639e-09
+}
