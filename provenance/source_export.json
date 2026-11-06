@@ -1381,7 +1381,8 @@
     "Removed the forced sm_120 setting in backend.py; PyTorch detects the installed GPU.",
     "Remaining workstation home prefixes in metadata replaced by ${HOME}.",
     "Added portable examples, CPU reconstruction, data downloader and external-source preparation helper.",
-    "Adapted development plot script to write generated figures under outputs/figures."
+    "Adapted development plot script to write generated figures under outputs/figures.",
+    "Native benchmark gets --output-dir; new outputs default to outputs/native, preserving archived results."
   ],
   "note": "original_sha256 refers to the private experiment archive; exported_sha256 precedes portability edits."
 }

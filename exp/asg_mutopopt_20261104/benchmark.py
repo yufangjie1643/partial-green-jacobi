@@ -193,7 +193,9 @@ def replay(b,n,steps,repetitions):
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('task',choices=['validate','replay'])
     p.add_argument('--n',type=int,default=32);p.add_argument('--steps',type=int,nargs='+',default=[0,49,62,179])
-    p.add_argument('--repetitions',type=int,default=3);args=p.parse_args()
+    p.add_argument('--repetitions',type=int,default=3)
+    p.add_argument('--output-dir',type=Path,default=ROOT/'outputs/native')
+    args=p.parse_args();OUT=args.output_dir
     with pilot.Guard(),torch.inference_mode():
         b=Candidates()
         if args.task=='validate': validate(b)

@@ -32,6 +32,6 @@ LD_PRELOAD=/usr/local/cuda/lib64/libcudart.so.13:/usr/local/cuda/lib64/libcufft.
   python exp/asg_mutopopt_20261104/benchmark.py replay --n 32
 ```
 
-`validate` checks the native stiffness action, right-hand sides, translations and effective response. Checkpoints 0, 49, 62 and 179 use identical previous displacements and independent residual certification. The benchmark resumes existing `replay_*.json` outputs; use a separate fresh checkout/output copy for new measurements so archived records remain intact. The portable internal-solver examples do not require these native dependencies.
+`validate` checks the native stiffness action, right-hand sides, translations and effective response. Checkpoints 0, 49, 62 and 179 use identical previous displacements and independent residual certification. New outputs go to `outputs/native/`; use `--output-dir` for a different run. The benchmark resumes existing `replay_*.json` outputs in that directory. The portable internal-solver examples do not require these native dependencies.
 
 The archive includes the original native validation and environment records. Publication-checkout GPU smoke checks exercise the internal solver; the external upstream projects are optional builds and their source licenses remain applicable.
